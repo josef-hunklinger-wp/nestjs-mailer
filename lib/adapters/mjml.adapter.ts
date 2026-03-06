@@ -5,7 +5,9 @@ import { TemplateAdapterConfig } from '../interfaces/template-adapter-config.int
 import { PugAdapter } from './pug.adapter';
 import { TemplateAdapter } from '../interfaces/template-adapter.interface';
 import { MailerOptions } from '../interfaces/mailer-options.interface';
-import * as mjml2html from 'mjml';
+
+const mjml = require('mjml');
+const mjml2html = mjml.mjml2html
 
 export class MjmlAdapter implements TemplateAdapter {
   private engine: TemplateAdapter | null;
